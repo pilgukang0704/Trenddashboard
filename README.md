@@ -8,6 +8,8 @@ This repository contains only the public static dashboard release.
   responses, and local review artifacts are excluded.
 - `release_report.json` binds this release to its validated source dashboard and
   durable-media overlay hashes.
+- `.gitattributes` keeps `index.html` byte-exact so the published Git blob matches
+  the release report SHA-256.
 
 GitHub Pages publishes the repository root from the `main` branch. The public
 URL is `https://pilgukang0704.github.io/Trenddashboard/`.
