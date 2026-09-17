@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "status": "READY",
-  "source_sha256": "63e8a35bd450cbe3240b3d54bacda5259cd29fadd6f6ecbb05ff4ee2ee4173f6",
-  "overlay_sha256": "ffe104fa131d8d2686c037fc5d2d3fcb74b7ce287e54847f970dc2c031db48e7",
-  "index_sha256": "6ccb8ed203e99015d219e45b4ded5e5533830366f3b1e69c9562b83784998e7b",
+  "source_sha256": "44de27c3130e8b743bd8c2899bf48ae44480b4b2c1198e0965788d1f806304f6",
+  "overlay_sha256": "792a8d8442c7a4b3faa1d441df83d1a404425d697f106ae0e72822523bda7498",
+  "index_sha256": "a2d9e29795b5daf9fef0c900faddd452b64559d16ed8292c1e2069e7c2476690",
   "index_bytes": 66978929,
   "posts": 1326,
   "accounts": 13,
@@ -26,7 +26,7 @@
   "base_incomplete_accounts_excluded": [
     "ahspirin"
   ],
-  "nonrelease_overlay_assets_excluded": 87,
+  "nonrelease_overlay_assets_excluded": 170,
   "ahspirin_included": false,
   "local_preview_url_occurrences": 1,
   "meta_cdn_occurrences": 0,
