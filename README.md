@@ -9,4 +9,5 @@ This repository contains only the public static dashboard release.
 - `release_report.json` binds this release to its validated source dashboard and
   durable-media overlay hashes.
 
-The site is deployed by `.github/workflows/pages.yml` after updates to `main`.
+GitHub Pages publishes the repository root from the `main` branch. The public
+URL is `https://pilgukang0704.github.io/Trenddashboard/`.
