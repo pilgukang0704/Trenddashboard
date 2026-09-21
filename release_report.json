@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "status": "READY",
-  "source_sha256": "be698da5b3e1190c5d4fc13b8c119b7429fa6cf9644e3dc6339f85f03151aad3",
-  "overlay_sha256": "151e81c3a5d5077b251c5c295b21a1b081d842c96837087139e32f5e120974da",
-  "index_sha256": "9010e575beeec7600b983d6d7394c256523bd65c8e5f4728fabdc135bbd1d906",
-  "index_bytes": 70573749,
-  "posts": 1345,
+  "source_sha256": "661f1b097752f6f5e178c3d24f620da5ab4297826af7cff3470905a4e754bba1",
+  "overlay_sha256": "35fb76bb861a733f4ecfe63ab50d1886e59cbf569df3bdb5ba3c1fac757c5d71",
+  "index_sha256": "88d8b32b5a2c8f774823e5258b75c305ff4e09a0ad02d2b7aa489b71a9cab3b0",
+  "index_bytes": 72332439,
+  "posts": 1354,
   "accounts": 13,
   "account_names": [
     "2pplee",
@@ -22,13 +22,24 @@
     "yerorii",
     "yjinpp"
   ],
-  "assets": 13407,
+  "assets": 13734,
   "base_incomplete_accounts_excluded": [
     "ahspirin"
   ],
-  "nonrelease_overlay_assets_excluded": 745,
+  "nonrelease_overlay_assets_excluded": 877,
   "ahspirin_included": false,
+  "aggregate_progress": {
+    "account": "ahspirin",
+    "before": "2026-05-01",
+    "posts_total": 90,
+    "posts_base_complete": 8,
+    "assets_total": 1329,
+    "assets_base_complete": 132,
+    "assets_detail_complete": 25,
+    "updated_at_kst": "2026-09-21T19:23+09:00",
+    "active_assets_published": 0
+  },
   "local_preview_url_occurrences": 1,
   "meta_cdn_occurrences": 0,
-  "cloudfront_occurrences": 56318
+  "cloudfront_occurrences": 57644
 }
