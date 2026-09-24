@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "status": "READY",
-  "source_sha256": "31443059a3671848746da530a2a950fc7b4ab198d8a9ec02e2ebb2633134b378",
-  "overlay_sha256": "1efd0b85b1fc340dcf43812034ed1db70f680a22c880ce6be6810c83620f30f7",
-  "index_sha256": "9e3924f9b2b56c73d8b891e216ed78098f8f90be37e1b80f19ab12a026cd4e76",
-  "index_bytes": 28917635,
-  "posts": 177,
+  "source_sha256": "b90cbfee1426dfd72c9093d7d0ace18a5ff1c6106e1bf8d3682c22aed101d3d7",
+  "overlay_sha256": "ab53fe28513b24f6aaa0a9b57bff4733c2b553c399bbcb660781c9b6b7d7a877",
+  "index_sha256": "88676c28ba82ea7987930cd17235f570b8a9c74b6cd194ccf5e376b7583e3150",
+  "index_bytes": 28442410,
+  "posts": 189,
   "accounts": 13,
   "account_names": [
     "2pplee",
@@ -14,25 +14,25 @@
     "bbird.silver",
     "blossomh_",
     "daisybyy",
+    "j876my",
     "kkyeongeun_",
     "leerian__",
     "myname_hana",
-    "noa.kkk",
     "tiissue",
     "yerorii",
     "yjinpp"
   ],
-  "assets": 2062,
+  "assets": 1968,
   "release_start_kst_inclusive": "2026-08-03",
   "account_completion_requirement": "all_in_scope_assets_base_and_detail_final",
   "incomplete_accounts_excluded": [],
   "unarchived_accounts_excluded": [
-    "j876my"
+    "noa.kkk"
   ],
-  "required_account": "ahspirin",
+  "required_account": "j876my",
   "base_incomplete_accounts_excluded": [],
   "detail_incomplete_accounts_excluded": [],
-  "nonrelease_overlay_assets_excluded": 13073,
+  "nonrelease_overlay_assets_excluded": 13317,
   "ahspirin_included": true,
   "aggregate_progress": {
     "account": "ahspirin",
@@ -42,10 +42,10 @@
     "assets_total": 336,
     "assets_base_complete": 336,
     "assets_detail_complete": 336,
-    "updated_at_kst": "2026-09-24T21:14+09:00",
+    "updated_at_kst": "2026-09-24T23:39+09:00",
     "active_assets_published": 0
   },
   "local_preview_url_occurrences": 1,
   "meta_cdn_occurrences": 0,
-  "cloudfront_occurrences": 8602
+  "cloudfront_occurrences": 8250
 }
