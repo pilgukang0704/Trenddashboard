@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "status": "READY",
-  "source_sha256": "0e5bb7f1b05c1790572a9b549c206b608520e40ee7ca40d0fe1b1b2da9940abb",
-  "overlay_sha256": "5a9f81eeb2223e1dd51bfdb173bcdf7a406b8da697195872d678fced6b40be50",
-  "index_sha256": "bd8a55e0698bbf8a47a38bd0f634c5c668c9ada28a5fdc2bee24c51589472c9c",
-  "index_bytes": 72801584,
-  "posts": 1357,
+  "source_sha256": "31443059a3671848746da530a2a950fc7b4ab198d8a9ec02e2ebb2633134b378",
+  "overlay_sha256": "1efd0b85b1fc340dcf43812034ed1db70f680a22c880ce6be6810c83620f30f7",
+  "index_sha256": "9e3924f9b2b56c73d8b891e216ed78098f8f90be37e1b80f19ab12a026cd4e76",
+  "index_bytes": 28917635,
+  "posts": 177,
   "accounts": 13,
   "account_names": [
     "2pplee",
+    "ahspirin",
     "avecqmour",
     "bbird.silver",
     "blossomh_",
     "daisybyy",
-    "j876my",
     "kkyeongeun_",
     "leerian__",
     "myname_hana",
@@ -22,24 +22,30 @@
     "yerorii",
     "yjinpp"
   ],
-  "assets": 13844,
-  "base_incomplete_accounts_excluded": [
-    "ahspirin"
+  "assets": 2062,
+  "release_start_kst_inclusive": "2026-08-03",
+  "account_completion_requirement": "all_in_scope_assets_base_and_detail_final",
+  "incomplete_accounts_excluded": [],
+  "unarchived_accounts_excluded": [
+    "j876my"
   ],
-  "nonrelease_overlay_assets_excluded": 956,
-  "ahspirin_included": false,
+  "required_account": "ahspirin",
+  "base_incomplete_accounts_excluded": [],
+  "detail_incomplete_accounts_excluded": [],
+  "nonrelease_overlay_assets_excluded": 13073,
+  "ahspirin_included": true,
   "aggregate_progress": {
     "account": "ahspirin",
-    "before": "2026-05-01",
-    "posts_total": 90,
-    "posts_base_complete": 14,
-    "assets_total": 1329,
-    "assets_base_complete": 211,
-    "assets_detail_complete": 58,
-    "updated_at_kst": "2026-09-22T12:26+09:00",
+    "from_inclusive": "2026-08-03",
+    "posts_total": 22,
+    "posts_base_complete": 22,
+    "assets_total": 336,
+    "assets_base_complete": 336,
+    "assets_detail_complete": 336,
+    "updated_at_kst": "2026-09-24T21:14+09:00",
     "active_assets_published": 0
   },
   "local_preview_url_occurrences": 1,
   "meta_cdn_occurrences": 0,
-  "cloudfront_occurrences": 58090
+  "cloudfront_occurrences": 8602
 }
