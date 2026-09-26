@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "status": "READY",
-  "source_sha256": "4f7066d13244e999857ca155bb34083d34037fccd8448d5c85fdac59cb544cdb",
-  "overlay_sha256": "c8ab227972234df3055c522f980cdb1681cad08a2bfc22d80f9e5111849bf6ea",
-  "index_sha256": "4cb0b50f261156f693ba630432c14e437e0463f36419e492f4f79bf3e0148dff",
-  "index_bytes": 30401565,
-  "posts": 237,
+  "source_sha256": "d4356e281dc3e2f7a8cb3a7cae9a9b17dc2663a87100b4e3340eb258f8bdfb5f",
+  "overlay_sha256": "63de5b5d2527f784c4b54b5e81a0be5ab764c46ede4fd3ef5417a87ce51f6ec6",
+  "index_sha256": "f3e141ac9173e394bd7da5a69428de7ff94bddeed9c24656bd5d56e54a92521b",
+  "index_bytes": 30703761,
+  "posts": 242,
   "accounts": 14,
   "account_names": [
     "2pplee",
@@ -23,7 +23,7 @@
     "yerorii",
     "yjinpp"
   ],
-  "assets": 2588,
+  "assets": 2666,
   "release_start_kst_inclusive": "2026-08-03",
   "account_completion_requirement": "all_in_scope_assets_base_and_detail_final",
   "incomplete_accounts_excluded": [],
@@ -41,10 +41,10 @@
     "assets_total": 336,
     "assets_base_complete": 336,
     "assets_detail_complete": 336,
-    "updated_at_kst": "2026-09-26T04:48+09:00",
+    "updated_at_kst": "2026-09-26T17:07+09:00",
     "active_assets_published": 0
   },
   "local_preview_url_occurrences": 1,
   "meta_cdn_occurrences": 0,
-  "cloudfront_occurrences": 10826
+  "cloudfront_occurrences": 11148
 }
