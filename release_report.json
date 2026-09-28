@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "status": "READY",
-  "source_sha256": "ce72bf0b280d3f828afc86da999323ebeb69d6abec43c7e58634f32a28f2fdb2",
-  "overlay_sha256": "aef2e278571913a9319c9242267d842933f8f7e1c3eccaccb93322b194bccb47",
-  "base_sha256": "2b2c6aacd440213a24a2ee84f4ee7bbfae746db1f98db4d757f00e5dacd1a78c",
-  "index_sha256": "9d03ebd02678048e8f3c992a6916b2067b17e423e87f6ce25c2fd40088217f45",
-  "index_bytes": 32446313,
-  "posts": 289,
+  "source_sha256": "26cc4a4e6ac60b964c1e1dfb4850cab6e36fd5ef1e2f46e5f1d258a2019aae18",
+  "overlay_sha256": "73281db3f766eb3dc7124fe36eb0215d619440446099161ec4e52b5328020d4a",
+  "base_sha256": "4a7f72dc9e2d83867c6f062808c62d4308d69b150ef21dd0557340c7a3fa4714",
+  "index_sha256": "63e61a5e1132413cc617ff24aabcb5138fa7c97fcbac1be16dd786228c523e8f",
+  "index_bytes": 32679989,
+  "posts": 294,
   "accounts": 14,
   "account_names": [
     "2pplee",
@@ -24,7 +24,7 @@
     "yerorii",
     "yjinpp"
   ],
-  "assets": 3154,
+  "assets": 3215,
   "release_start_kst_inclusive": "2026-08-03",
   "account_completion_requirement": "all_in_scope_assets_base_and_detail_final",
   "incomplete_accounts_excluded": [],
@@ -42,10 +42,10 @@
     "assets_total": 336,
     "assets_base_complete": 336,
     "assets_detail_complete": 336,
-    "updated_at_kst": "2026-09-28T19:51+09:00",
+    "updated_at_kst": "2026-09-29T00:52+09:00",
     "active_assets_published": 0
   },
   "local_preview_url_occurrences": 0,
   "meta_cdn_occurrences": 0,
-  "cloudfront_occurrences": 13194
+  "cloudfront_occurrences": 13448
 }
