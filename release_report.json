@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "status": "READY",
-  "source_sha256": "eda610dfe33f88e5b31580e5a0094f3ecea84bc3d6a95e0912345e2e62aca7c8",
-  "overlay_sha256": "2adf21c856f48b872dc8df1f926602d420788a11e030220915682bc9a7c2924c",
-  "base_sha256": "32f76d27a0e2055677994ad13ac4714266608a400f994dc476e720f940089df0",
-  "index_sha256": "03348f5cd0f531aeecbfa9ef756a3526d3ea0c10320837d2f7c61646c6ce08a4",
-  "index_bytes": 31794912,
-  "posts": 277,
+  "source_sha256": "84beee5bfc3e8945fe928a0f8eee00c7032e99ec68b29937db9bbb63861f6f9c",
+  "overlay_sha256": "6ef480b0848619b3593434f878058f18cbced0079fd4022998c0984a66f97ea7",
+  "base_sha256": "42db044652ed2b296555ce4ad7201e127e0c820f3f9ef636e18a4b3eaf4760e8",
+  "index_sha256": "414e76a1a36e404da00b484b75d911a768768df66b41f167708118f7c0c42f4a",
+  "index_bytes": 32061161,
+  "posts": 283,
   "accounts": 14,
   "account_names": [
     "2pplee",
@@ -24,12 +24,12 @@
     "yerorii",
     "yjinpp"
   ],
-  "assets": 3023,
+  "assets": 3075,
   "release_start_kst_inclusive": "2026-08-03",
   "account_completion_requirement": "all_in_scope_assets_base_and_detail_final",
   "incomplete_accounts_excluded": [],
   "unarchived_accounts_excluded": [],
-  "required_account": "avecqmour",
+  "required_account": null,
   "base_incomplete_accounts_excluded": [],
   "detail_incomplete_accounts_excluded": [],
   "nonrelease_overlay_assets_excluded": 13022,
@@ -42,10 +42,10 @@
     "assets_total": 336,
     "assets_base_complete": 336,
     "assets_detail_complete": 336,
-    "updated_at_kst": "2026-09-28T13:32+09:00",
+    "updated_at_kst": "2026-09-28T16:35+09:00",
     "active_assets_published": 0
   },
   "local_preview_url_occurrences": 0,
   "meta_cdn_occurrences": 0,
-  "cloudfront_occurrences": 12646
+  "cloudfront_occurrences": 12866
 }
