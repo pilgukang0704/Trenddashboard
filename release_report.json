@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "status": "READY",
-  "source_sha256": "f845b95662ef4f1446e4f2ec0124a52b0a2030e1954f34bc1cd76fa9911c2fd0",
-  "overlay_sha256": "73281db3f766eb3dc7124fe36eb0215d619440446099161ec4e52b5328020d4a",
-  "base_sha256": "4a7f72dc9e2d83867c6f062808c62d4308d69b150ef21dd0557340c7a3fa4714",
+  "source_sha256": "2382211c294447c32748c4de6576d94dfb11dfcca9fa3624c69355069d21c0bc",
+  "overlay_sha256": "cf9a5e86d2f7c000dda86dec83ae853caa0e808d6d855ed1f452976cc993ad0c",
+  "base_sha256": "0bb85cfc04d98c8afa71107aa59e3aded5d50ede45ee8c45ee4b7f982c651c84",
   "baseline_sha256": "bad19e1c0993242e72a358527e98d36889c922f54d7732b45c6403f869378173",
   "baseline_source_index_sha256": "ad5908764cdd93ca6e166963a4c068e7f22364bdf0fe1830f1939e7fc235e57c",
   "baseline_posts_preserved": 1326,
   "baseline_assets_preserved": 12863,
-  "index_sha256": "c2efac1746307594358b3a872cd13f18536fb62abaa667aecc0afe3d0329c83f",
-  "index_bytes": 72693824,
-  "posts": 1447,
+  "index_sha256": "de62cb6a341642b5c4c79ace12167ede5d4e462670892ef7d3048d5d55779f38",
+  "index_bytes": 73235151,
+  "posts": 1459,
   "accounts": 14,
   "account_names": [
     "2pplee",
@@ -28,12 +28,12 @@
     "yerorii",
     "yjinpp"
   ],
-  "assets": 14305,
+  "assets": 14438,
   "release_start_kst_inclusive": "2026-08-03",
   "account_completion_requirement": "all_in_scope_assets_base_and_detail_final",
   "incomplete_accounts_excluded": [],
   "unarchived_accounts_excluded": [],
-  "required_account": "leerian__",
+  "required_account": "bbird.silver",
   "base_incomplete_accounts_excluded": [],
   "detail_incomplete_accounts_excluded": [],
   "nonrelease_overlay_assets_excluded": 1932,
@@ -46,10 +46,10 @@
     "assets_total": 336,
     "assets_base_complete": 336,
     "assets_detail_complete": 336,
-    "updated_at_kst": "2026-09-29T08:40+09:00",
+    "updated_at_kst": "2026-09-29T14:45+09:00",
     "active_assets_published": 0
   },
   "local_preview_url_occurrences": 0,
   "meta_cdn_occurrences": 0,
-  "cloudfront_occurrences": 60114
+  "cloudfront_occurrences": 60670
 }
