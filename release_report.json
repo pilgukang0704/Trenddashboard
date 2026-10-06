@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "status": "READY",
-  "source_sha256": "7225fbb47058a5308bce42452c05dec0aa3e23ca20ced1ceae7810a7506009de",
+  "source_sha256": "bad1172ef7f2c49b263ef5577156118920ceceb131bd52889fb3e06064c9f579",
   "overlay_sha256": "cb6e66c8f161913f3d231503864cb8f826709d9861ff6ecf62ffd1dc448fd6e1",
-  "base_sha256": "712cf871e07b2915d2b795d0e2b2a0fef79084978de0ae57dd1ae6c62e6a7989",
+  "base_sha256": "02c1dfa5a884bbccdb22a0fddef19a677fccd35fe9bf6c68317b3eee7d54336f",
   "baseline_sha256": "bad19e1c0993242e72a358527e98d36889c922f54d7732b45c6403f869378173",
   "baseline_source_index_sha256": "ad5908764cdd93ca6e166963a4c068e7f22364bdf0fe1830f1939e7fc235e57c",
   "baseline_posts_preserved": 1326,
   "baseline_assets_preserved": 12863,
-  "index_sha256": "795d5147e14762bd579f3805e34c4da1b34b4ca060ef65388bf71fab2897bbe6",
-  "index_bytes": 82784015,
+  "index_sha256": "6b37108fe71dcb15e42be61f378e2262140a764c295b45389da5bd7803ca6716",
+  "index_bytes": 83092196,
   "posts": 1582,
   "accounts": 14,
   "account_names": [
@@ -46,7 +46,7 @@
     "assets_total": 589,
     "assets_base_complete": 589,
     "assets_detail_complete": 589,
-    "updated_at_kst": "2026-10-06T19:13+09:00",
+    "updated_at_kst": "2026-10-06T22:36+09:00",
     "active_assets_published": 0
   },
   "local_preview_url_occurrences": 0,
