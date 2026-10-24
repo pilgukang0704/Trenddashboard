@@ -1999,7 +1999,7 @@
   <noscript>이 대시보드는 필터와 차트 표시에 JavaScript가 필요합니다.</noscript>
 
   <!-- DASHBOARD_DATA_START -->
-<script id="dashboard-data" type="application/json">{"core":"data/core-bed2d3f676.json","posts":["data/posts-2026-01-862c85a4f7.json","data/posts-2026-02-f6b73d994f.json","data/posts-2026-03-238f9d4b88.json","data/posts-2026-04-5191ac38ce.json","data/posts-2026-05-7f31769175.json","data/posts-2026-06-ddd0c9c545.json","data/posts-2026-07-88a4d663b5.json","data/posts-2026-08-56bfdfe515.json","data/posts-2026-09-8d5244aaaa.json","data/posts-2026-10-cc50a275f2.json"]}</script>
+<script id="dashboard-data" type="application/json">{"core":"data/core-5dd5fbb9a3.json","posts":["data/posts-2026-01-1337d1c40e.json","data/posts-2026-02-41ff7d5865.json","data/posts-2026-03-e89c285297.json","data/posts-2026-04-ea83770cbc.json","data/posts-2026-05-35770bf9ca.json","data/posts-2026-06-55268292f7.json","data/posts-2026-07-1800a82e8a.json","data/posts-2026-08-ccd82794d8.json","data/posts-2026-09-a9c74fb4df.json","data/posts-2026-10-3ea5a7b54b.json"]}</script>
   <script>
     (() => {
       "use strict";
@@ -3025,6 +3025,8 @@
         });
         if (!tags.length && asset?.classification_status === "reviewed_no_fashion") {
           tags.push('<span class="post-category progress">No fashion item</span>');
+        } else if (!tags.length && asset?.classification_status === "skipped_carousel_limit") {
+          tags.push('<span class="post-category progress">Not reviewed (first 5 only)</span>');
         } else if (!tags.length) {
           tags.push('<span class="post-category pending">Review Pending</span>');
         }
@@ -3070,6 +3072,9 @@
         const status = String(asset?.design_status || "pending_design_vlm");
         if (status === "not_applicable_no_fashion") {
           return '<span class="post-category progress">No fashion item</span>';
+        }
+        if (status === "skipped_carousel_limit") {
+          return '<span class="post-category progress">Not reviewed (first 5 only)</span>';
         }
         if (status === "needs_review") {
           return '<span class="post-category pending">Detailed VLM needs review</span>';
