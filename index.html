@@ -3598,6 +3598,20 @@
 
       populateFilters();
       updateFreshness();
+      // URL 로 첫 화면 지정 (?cat=item:JP&sort=engagement) — MLB 발표본 팝업용 (2026-11-03)
+      (() => {
+        const query = new URLSearchParams(window.location.search);
+        const sort = query.get("sort"), cat = query.get("cat");
+        if (sort && [...elements.sortFilter.options].some(option => option.value === sort)) {
+          state.sortOrder = sort;
+          elements.sortFilter.value = sort;
+        }
+        if (cat) {
+          state.category = cat;
+          if (cat.startsWith("mid:")) openTaxonomyBranch = cat.slice(4);
+          else if (cat.startsWith("item:")) openTaxonomyBranch = itemByKey.get(cat.slice(5))?.mid_category || "";
+        }
+      })();
       setCategoryDrawerOpen(false);
       render();
       document.documentElement.dataset.dashboardReady = "true";
