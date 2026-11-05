@@ -649,6 +649,33 @@
       text-transform: uppercase;
     }
 
+    .design-signal-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      min-height: 82px;
+      margin: 10px 0 14px;
+    }
+
+    .design-signal-flat {
+      flex: 0 0 82px;
+      width: 82px;
+      height: 82px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      opacity: 0.85;
+      pointer-events: none;
+    }
+
+    .design-signal-heading .design-signal-name {
+      flex: 1;
+      min-width: 0;
+      min-height: 0;
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
+
     .design-signal-name {
       min-height: 48px;
       margin: 16px 0 15px;
@@ -2051,11 +2078,13 @@
 
 <!-- DASHBOARD_DATA_END -->
 
+  <script id="design-type-flat-catalog" src="assets/design_type_flats/web/catalog-5887f16f892b.js" async onload="window.dispatchEvent(new Event('design-type-flats-ready'))"></script>
   <script>
     window.__startDashboard = () => {
       "use strict";
 
       const payload = window.__DASHBOARD_PAYLOAD__ || {};
+      window.addEventListener("design-type-flats-ready", () => scheduleRender());
       const allPosts = Array.isArray(payload.posts) ? payload.posts : [];
       const allPostById = new Map(allPosts.map(post => [String(post.post_id || ""), post]));
       const meta = payload.meta || {};
@@ -2813,7 +2842,10 @@
                 <span class="design-signal-rank">${String(index + 1).padStart(2, "0")}</span>
                 <span class="design-signal-tier">${escapeHTML(designSignalTierLabel(row.tier))}</span>
               </div>
-              <h3 class="design-signal-name">${escapeHTML(row.signalLabel)}</h3>
+              <div class="design-signal-heading">
+                <h3 class="design-signal-name">${escapeHTML(row.signalLabel)}</h3>
+                ${window.DESIGN_TYPE_FLATS?.[row.signalKey] ? `<img class="design-signal-flat" src="${escapeHTML(window.DESIGN_TYPE_FLATS[row.signalKey])}" alt="" width="82" height="82" loading="lazy" decoding="async" fetchpriority="low" onerror="this.remove()">` : ""}
+              </div>
               <div class="design-signal-metrics">
                 <div class="design-signal-metric"><span>Creators</span><strong>${number.format(row.creators.length)}</strong></div>
                 <div class="design-signal-metric"><span>Posts</span><strong>${number.format(row.evidence.length)}</strong></div>
