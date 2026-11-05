@@ -8,8 +8,8 @@
   "baseline_source_index_sha256": "ad5908764cdd93ca6e166963a4c068e7f22364bdf0fe1830f1939e7fc235e57c",
   "baseline_posts_preserved": 1326,
   "baseline_assets_preserved": 12863,
-  "index_sha256": "2389b66cf31b4e1ecadaa6863ad61d10621427990b51e0c7a748620462767c4b",
-  "index_bytes": 138875,
+  "index_sha256": "aa370c614a36a84cfeeeb351cc6cbecb8ec0c21fc813e8a15115114f851413e6",
+  "index_bytes": 138927,
   "posts": 3850,
   "accounts": 50,
   "account_names": [
@@ -135,19 +135,24 @@
       "bytes": 1556493
     }
   },
-  "total_bytes": 97793703,
+  "total_bytes": 97793755,
   "local_preview_url_occurrences": 0,
   "meta_cdn_occurrences": 0,
-  "cloudfront_occurrences": 46970,
+  "cloudfront_occurrences": 46971,
   "design_type_flats": {
     "count": 410,
-    "catalog": "assets/design_type_flats/web/catalog-5887f16f892b.js",
+    "catalog": "https://static-dashff.fnf.co.kr/mlb_ax/trend_dashboard/design_type_flats/display/catalog-afd7f5f94e68.js",
     "opacity": 0.85,
     "display_px": 82,
     "webp_total_bytes": 1327886,
     "webp_max_bytes": 7968,
     "shoe_toe_direction": "right",
     "bag_material": "leather",
-    "release_scope": "UI-only; previously published data preserved byte-for-byte"
+    "release_scope": "UI-only; previously published data preserved byte-for-byte",
+    "image_provider": "s3_via_cloudfront",
+    "image_base_url": "https://static-dashff.fnf.co.kr/mlb_ax/trend_dashboard/design_type_flats/releases/2026-11-05_3d5250a66161/",
+    "archive_version": "2026-11-05_3d5250a66161",
+    "archive_manifest_url": "https://static-dashff.fnf.co.kr/mlb_ax/trend_dashboard/design_type_flats/releases/2026-11-05_3d5250a66161/manifest.json",
+    "catalog_bytes": 32326
   }
 }
