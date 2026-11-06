@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "status": "READY",
-  "source_sha256": "a5c7101587a50afbc630342bff56af88ae53d9078a316f8a673822f12981ef15",
-  "overlay_sha256": "a02654c66b1debabe32bc0b4edfb74a3a906629fc059f13680cd4e7091505ed5",
-  "base_sha256": "abf9f9e8c60f4628482131cf18f1c636ff3ddb730195df394fa3be81e64ae4f0",
+  "source_sha256": "26d291cd3b6b9b178d1a07e495be0f044870044826a5cec79ad018496a6ec878",
+  "overlay_sha256": "18ea3d95f9ef887ef113f0535e3019b54de547328639c51da4752035eb352893",
+  "base_sha256": "82e7da635760d7ead47fec160c3947d83f839b9559e884e06304b539ee206c6a",
   "baseline_sha256": "bad19e1c0993242e72a358527e98d36889c922f54d7732b45c6403f869378173",
   "baseline_source_index_sha256": "ad5908764cdd93ca6e166963a4c068e7f22364bdf0fe1830f1939e7fc235e57c",
   "baseline_posts_preserved": 1326,
   "baseline_assets_preserved": 12863,
-  "index_sha256": "aa370c614a36a84cfeeeb351cc6cbecb8ec0c21fc813e8a15115114f851413e6",
+  "index_sha256": "b68732caef21a97c38f3f97794b605bc037a0023acdf29fbaccc8be05a9115cc",
   "index_bytes": 138927,
-  "posts": 3850,
+  "posts": 3893,
   "accounts": 50,
   "account_names": [
     "1017kk",
@@ -64,7 +64,7 @@
     "yulriee",
     "zi.fan_"
   ],
-  "assets": 39270,
+  "assets": 39650,
   "release_start_kst_inclusive": "2026-08-03",
   "account_completion_requirement": "all_in_scope_assets_base_and_detail_final",
   "incomplete_accounts_excluded": [],
@@ -72,7 +72,7 @@
   "required_account": null,
   "base_incomplete_accounts_excluded": [],
   "detail_incomplete_accounts_excluded": [],
-  "nonrelease_overlay_assets_excluded": 1932,
+  "nonrelease_overlay_assets_excluded": 3378,
   "ahspirin_included": true,
   "aggregate_progress": {
     "account": "ahspirin",
@@ -82,77 +82,61 @@
     "assets_total": 901,
     "assets_base_complete": 901,
     "assets_detail_complete": 901,
-    "updated_at_kst": "2026-11-05T04:11+09:00",
+    "updated_at_kst": "2026-11-06T20:52+09:00",
     "active_assets_published": 0
   },
   "data_files": {
-    "data/core-fbbbfcb468.json": {
-      "sha256": "fbbbfcb468c208db8386b00e350e78ae6d2e09501e2b2880e92ee627753d623d",
-      "bytes": 15779974
+    "data/core-3bfe9c96ef.json": {
+      "sha256": "3bfe9c96ef241fb3cbed6b95820ba4b522cc816ec4c30fcd4ca43e188b34cf79",
+      "bytes": 16487830
     },
-    "data/posts-2026-01-781c41dada.json": {
-      "sha256": "781c41dada4267be911f1b40a6d605b3a9686e2a40d3d10bb612098bc50b4e0e",
+    "data/posts-2026-01-da5d70eb61.json": {
+      "sha256": "da5d70eb6196d25af56b85f098238d4ea47a07a8c8aa66d6e44bd97370607af7",
       "bytes": 1796021
     },
-    "data/posts-2026-02-ec41120f5e.json": {
-      "sha256": "ec41120f5e08ccd3b6c733006ac30d1b29b2819fb8fa36c9300b7aa7062bdead",
+    "data/posts-2026-02-e3fdfdf1eb.json": {
+      "sha256": "e3fdfdf1ebfc00690a9e636177eb1d809fa5ede8c931ba78149e4701d62602e0",
       "bytes": 2060111
     },
-    "data/posts-2026-03-4fb1d65601.json": {
-      "sha256": "4fb1d65601eadcc4bcb6461db827c80e9fe7e745d14325f7775e34a5b343a824",
+    "data/posts-2026-03-3c64c843c6.json": {
+      "sha256": "3c64c843c68d21cd6c1098a2ea8edbef2ae5754a84e155656ee29a514d0a31d1",
       "bytes": 3429697
     },
-    "data/posts-2026-04-00a27fc7d3.json": {
-      "sha256": "00a27fc7d340555db6a0c2f4950750e6242494c7d956f9cb736288e362ffeba1",
+    "data/posts-2026-04-2d08ad32fd.json": {
+      "sha256": "2d08ad32fd365151a4c41d6d9ece71f75645a2a072bd4f7966e2432646c066c1",
       "bytes": 3958177
     },
-    "data/posts-2026-05-99547b293a.json": {
-      "sha256": "99547b293a4afa1b4b227303e7f86ca2d34981680625b583fdc0ff7bb36b3d9b",
+    "data/posts-2026-05-f4c0d97937.json": {
+      "sha256": "f4c0d97937d732bb4fd485a9bdf9e3b9565fbb2ea9e27398eb874c988d969d4e",
       "bytes": 3598184
     },
-    "data/posts-2026-06-cadf2d1950.json": {
-      "sha256": "cadf2d1950c02154dd299a726e3f1fd22a3ff9477884b86f2aa5cd54909c9c44",
+    "data/posts-2026-06-7d1a7a3fe2.json": {
+      "sha256": "7d1a7a3fe247a51fc4b9ab6448f81849632e751ca722ce26a3474cb9772029c4",
       "bytes": 4511242
     },
-    "data/posts-2026-07-abd2212038.json": {
-      "sha256": "abd22120386a1659d1c477204c9121351740399dc6f572e21c943ceac52ef2a3",
+    "data/posts-2026-07-06dd75bb6a.json": {
+      "sha256": "06dd75bb6a561c794f730339594e9f07e6f0848cc1acea67468ac48e56c58ab9",
       "bytes": 3916393
     },
-    "data/posts-2026-08-85e7cd0b95.json": {
-      "sha256": "85e7cd0b95476b653ad504aa5f8b76e99979f164d26c3429cd647f8f211fa449",
+    "data/posts-2026-08-ef1228124f.json": {
+      "sha256": "ef1228124f224d6b10ed58cb4957297f22bb839618e945048e38e69fdff43d69",
       "bytes": 18032894
     },
-    "data/posts-2026-09-ce38f7bd79.json": {
-      "sha256": "ce38f7bd7949f5f92dcf6ff5ba36952a3077de0bcdec98571b4548c213d92c2e",
+    "data/posts-2026-09-7e1112dda3.json": {
+      "sha256": "7e1112dda383d6096d7bbaeb81702635f296d3e2e1fc7d44dad09f25bff271f1",
       "bytes": 21595677
     },
-    "data/posts-2026-10-6007aaae76.json": {
-      "sha256": "6007aaae76eb442cd14099e37cb1ea9f91ae33bfdcdee7ec08bb033c60082cf0",
-      "bytes": 17419965
+    "data/posts-2026-10-786472668d.json": {
+      "sha256": "786472668d848e038706c67d5ba10fa48200581bcb042dd756969b974ad46d94",
+      "bytes": 17420008
     },
-    "data/posts-2026-11-194881ce12.json": {
-      "sha256": "194881ce12aa8e8ed98ff53f66d9d567c876e407148f97016448c630492670da",
-      "bytes": 1556493
+    "data/posts-2026-11-6fc2d1b807.json": {
+      "sha256": "6fc2d1b807fb779a563738e998a3cd7009e583473c7fc705a8037cd69a803d5f",
+      "bytes": 2124778
     }
   },
-  "total_bytes": 97793755,
+  "total_bytes": 99069939,
   "local_preview_url_occurrences": 0,
   "meta_cdn_occurrences": 0,
-  "cloudfront_occurrences": 46971,
-  "design_type_flats": {
-    "count": 410,
-    "catalog": "https://static-dashff.fnf.co.kr/mlb_ax/trend_dashboard/design_type_flats/display/catalog-afd7f5f94e68.js",
-    "opacity": 0.85,
-    "display_px": 82,
-    "webp_total_bytes": 1327886,
-    "webp_max_bytes": 7968,
-    "shoe_toe_direction": "right",
-    "bag_material": "leather",
-    "release_scope": "UI-only; previously published data preserved byte-for-byte",
-    "image_provider": "s3_via_cloudfront",
-    "image_base_url": "https://static-dashff.fnf.co.kr/mlb_ax/trend_dashboard/design_type_flats/releases/2026-11-05_3d5250a66161/",
-    "archive_version": "2026-11-05_3d5250a66161",
-    "archive_manifest_url": "https://static-dashff.fnf.co.kr/mlb_ax/trend_dashboard/design_type_flats/releases/2026-11-05_3d5250a66161/manifest.json",
-    "catalog_bytes": 32326
-  }
+  "cloudfront_occurrences": 47437
 }
