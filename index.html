@@ -1808,7 +1808,294 @@
         transition-duration: 0.01ms !important;
       }
     }
+    .design-signal-tabs { flex-wrap: wrap; }
+    .attribute-entry { border: 0; background: transparent; color: var(--muted, #666); padding: 8px 0; text-align: left; cursor: pointer; font: inherit; }
+    .attribute-targets, .attribute-filter-chips { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
+    .attribute-targets { grid-column: 1 / -1; min-width: 0; }
+    .attribute-chip { max-width: 100%; border: 1px solid #d5d8d5; border-radius: 18px; padding: 7px 11px; background: #fff; color: #33433b; font: inherit; font-size: 12px; cursor: pointer; overflow-wrap: anywhere; }
+    .attribute-chip[aria-pressed="true"], .attribute-chip.selected { background: #e3ece6; border-color: #66816f; }
+    .attribute-panel { min-width: 0; padding: 18px; border: 1px solid #dfe3df; border-radius: 14px; background: #fff; }
+    .attribute-panel h3 { margin: 0 0 5px; font-size: 15px; overflow-wrap: anywhere; }
+    .attribute-panel-note { display: block; color: #6c756e; font-size: 11px; margin-bottom: 12px; }
+    .attribute-value { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; width: 100%; padding: 9px 8px 11px; margin: 3px 0; border: 1px solid transparent; border-radius: 6px; background: #f8faf8; text-align: left; font: inherit; font-size: 12px; cursor: pointer; }
+    .attribute-value-label { overflow-wrap: anywhere; min-width: 0; }
+    .attribute-value-count { white-space: nowrap; color: #59675e; font-variant-numeric: tabular-nums; }
+    .attribute-value::after { content: ""; position: absolute; bottom: 0; left: 0; height: 3px; width: var(--share); max-width: 100%; background: #9ab3a2; border-radius: 3px; }
+    .attribute-value[aria-pressed="true"] { border-color: #577a63; background: #e5eee8; }
+    .attribute-value[aria-pressed="true"]::after { background: #3f7250; }
+    .attribute-other summary { cursor: pointer; color: #536b5b; font-size: 12px; padding: 10px 0 3px; overflow-wrap: anywhere; }
+    .attribute-low-axes { grid-column: 1 / -1; min-width: 0; }
+    .attribute-low-axes > summary { padding: 14px; cursor: pointer; color: #536b5b; font-size: 13px; border: 1px solid #dfe3df; border-radius: 10px; background: #fff; }
+    .attribute-low-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: start; margin-top: 12px; }
+    #designSignalTabs { scroll-margin-top: 100px; }
+    .design-signal-grid.attribute-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding: 16px; background: #f5f7f5; align-items: start; }
+    .attribute-grid .design-signal-empty { grid-column: 1 / -1; }
+    .content-filter-summary .attribute-filter-chips { margin-top: 8px; }
+    @media (min-width: 601px) and (max-width: 1000px) {
+      .design-signal-grid.attribute-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .attribute-low-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 600px) {
+      html[data-attribute-mode="true"] .control-wrap { position: static; }
+      .design-signal-grid.attribute-grid { grid-template-columns: minmax(0, 1fr); }
+      .attribute-low-grid { grid-template-columns: minmax(0, 1fr); }
+      .attribute-panel { padding: 14px; }
+      .attribute-targets { align-items: stretch; }
+    }
+    .content-filter-summary { display: block; min-width: 0; padding: 10px 12px; scroll-margin-top: 110px; }
+    .content-summary-line, .attribute-summary-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+    .content-summary-line { margin-bottom: 8px; }
+    .attribute-collapse { border: 1px solid #d5d8d5; border-radius: 12px; padding: 4px 8px; background: #fff; color: #536b5b; font: inherit; cursor: pointer; }
+    .attribute-controls[hidden] { display: none; }
+    .attribute-controls .attribute-targets { margin-bottom: 8px; gap: 5px; }
+    .attribute-controls .attribute-chip { font-size: 11px; padding: 5px 8px; }
+    .attribute-grid, .attribute-low-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; align-items: stretch; }
+    .attribute-low-grid { margin-top: 6px; }
+    .attribute-controls .attribute-panel { padding: 8px; border-radius: 8px; min-width: 0; }
+    .attribute-controls .attribute-panel h3 { font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .attribute-controls .attribute-panel-note { font-size: 9px; line-height: 1.4; margin-bottom: 5px; }
+    .attribute-controls .attribute-value { min-height: 22px; padding: 3px 4px 5px; line-height: 14px; font-size: 11px; gap: 3px; margin: 2px 0; }
+    .attribute-controls .attribute-value-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .attribute-controls .attribute-value-count { font-size: 10px; }
+    .attribute-controls .attribute-other summary { font-size: 10px; padding: 5px 0 2px; }
+    .attribute-controls .attribute-filter-chips { margin-top: 8px; padding-top: 8px; border-top: 1px solid #e0e4e0; }
+    @media (min-width: 640px) { .attribute-grid, .attribute-low-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (min-width: 1024px) { .attribute-grid, .attribute-low-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+    @media (min-width: 1280px) { .attribute-grid, .attribute-low-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); } }
+    @media (max-width: 639px) { .content-filter-summary { scroll-margin-top: 12px; } }
+    @media (max-width: 767px) {
+      body { padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+      .control-wrap { position: static; }
+      .content-filter-summary { scroll-margin-top: 12px; }
+      #categoryDrawerToggle {
+        top: auto;
+        bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+        left: 50%;
+        transform: translateX(-50%);
+        writing-mode: horizontal-tb;
+        min-width: 0;
+        max-width: calc(100vw - 32px);
+        max-height: none;
+        min-height: 44px;
+        width: max-content;
+        padding: 12px 16px;
+        gap: 6px;
+        border-radius: 999px;
+        font-size: 12px;
+        letter-spacing: .02em;
+        text-transform: none;
+        z-index: 51;
+      }
+      #categoryDrawerToggle > span:first-child { flex: 0 0 auto; }
+      #categoryDrawerToggle > span:first-child::after { content: " ·"; }
+      #categoryDrawerToggle .category-drawer-tab-current { min-width: 0; max-width: 180px; max-height: none; font-size: inherit; }
+      #categorySidebar { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+      body:has(dialog[open]) #categoryDrawerToggle { display: none; }
+    }
   </style>
+<script id="attribute-breakdown-module">
+/* Post-level attribute facets with same-instance matching. Embedded by update_trend_dashboard.py. */
+class AttributeBreakdown {
+  constructor({ items, terms, axes }) {
+    this.items = items;
+    this.terms = terms;
+    this.axes = new Map((axes || []).map(axis => [axis.key, axis]));
+    this.postIndex = new WeakMap();
+    this.scopes = new Map();
+    this.targets = new Map();
+    this.core = new Set(['Outer', 'Inner', 'Bottom', 'Shoes', 'Bag', 'Headwear']);
+    this.target = '';
+    this.autoTarget = true;
+    this.values = {};
+    this.previousTarget = '';
+    this.expanded = new Set();
+    this.lowAxesExpanded = false;
+  }
+
+  primary(instance) {
+    const types = instance.design_types || [];
+    return String(types.find(term => term.role === 'primary')?.term_key || types[0]?.term_key || '');
+  }
+
+  indexPost(post) {
+    if (this.postIndex.has(post)) return this.postIndex.get(post);
+    const records = [];
+    (post.assets || []).forEach((asset, assetIndex) => {
+      (asset.design_instances || []).forEach(instance => {
+        const item = String(instance.reporting_item_key || instance.base_item_key || '');
+        const design = this.primary(instance);
+        const record = { postId: String(post.post_id), assetId: String(asset.id), assetIndex,
+          item, design, attributes: new Map() };
+        records.push(record);
+        if (design) record.attributes.set('design_type', new Set([design]));
+        Object.entries(instance.attributes || {}).forEach(([axis, values]) => {
+          if (!Array.isArray(values)) return;
+          values.forEach(value => {
+            const key = String(value?.term_key || '');
+            const term = this.terms.get(key);
+            if (!term || term.axis !== axis || value.is_not_visible === true
+              || /(?:^|\.)(?:not_visible|unknown|not_applicable)$/.test(key)) return;
+            if (!record.attributes.has(axis)) record.attributes.set(axis, new Set());
+            record.attributes.get(axis).add(key);
+          });
+        });
+      });
+    });
+    this.postIndex.set(post, records);
+    return records;
+  }
+
+  scoped(posts, category, cacheKey) {
+    if (this.scopes.has(cacheKey)) return this.scopes.get(cacheKey);
+    const mid = category.startsWith('mid:') ? category.slice(4) : '';
+    const records = posts.flatMap(post => this.indexPost(post)).filter(record =>
+      !mid || this.items.get(record.item)?.mid_category === mid);
+    this.scopes.set(cacheKey, records);
+    if (this.scopes.size > 8) this.scopes.delete(this.scopes.keys().next().value);
+    return records;
+  }
+
+  choices(records) {
+    const counts = new Map();
+    records.forEach(record => {
+      if (!this.core.has(this.items.get(record.item)?.mid_category)) return;
+      if (!counts.has(record.item)) counts.set(record.item, new Set());
+      counts.get(record.item).add(record.postId);
+    });
+    return [...counts].map(([item, posts]) => [item, posts.size])
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 8);
+  }
+
+  matchesTarget(record, target) {
+    return target.startsWith('design:') ? record.design === target.slice(7)
+      : target.startsWith('item:') && record.item === target.slice(5);
+  }
+
+  matches(record, exceptAxis = '') {
+    return Object.entries(this.values).every(([axis, selected]) => axis === exceptAxis
+      || !selected.length || selected.some(key => record.attributes.get(axis)?.has(key)));
+  }
+
+  axisPosts(records, axis) {
+    const byPost = new Map();
+    records.forEach(record => {
+      if (!byPost.has(record.postId)) byPost.set(record.postId, new Set());
+      const values = byPost.get(record.postId);
+      (record.attributes.get(axis) || []).forEach(key => values.add(key));
+    });
+    const counts = new Map();
+    let labeled = 0, multi = false;
+    byPost.forEach(values => {
+      if (!values.size) return;
+      labeled++;
+      if (values.size > 1) multi = true;
+      values.forEach(key => counts.set(key, (counts.get(key) || 0) + 1));
+    });
+    return { byPost, counts, labeled, total: byPost.size, multi };
+  }
+
+  view(posts, category, cacheKey) {
+    const scoped = this.scoped(posts, category, cacheKey);
+    const choices = this.choices(scoped);
+    const target = category.startsWith('item:') ? category
+      : this.target || (this.autoTarget && choices.length ? `item:${choices[0][0]}` : '');
+    if (this.previousTarget && this.previousTarget !== target) this.values = {};
+    this.previousTarget = target;
+    const targetKey = JSON.stringify([cacheKey, target]);
+    if (!this.targets.has(targetKey)) {
+      const records = target ? scoped.filter(record => this.matchesTarget(record, target)) : [];
+      const axes = [...new Set(records.flatMap(record => [...record.attributes.keys()]))]
+        .filter(axis => axis !== 'design_type' || target.startsWith('item:'));
+      const baseline = new Map(axes.map(axis => {
+        const stats = this.axisPosts(records, axis);
+        return [axis, { labeled: stats.labeled, total: stats.total }];
+      }));
+      this.targets.set(targetKey, { records, axes, baseline });
+      if (this.targets.size > 8) this.targets.delete(this.targets.keys().next().value);
+    }
+    const { records, axes, baseline } = this.targets.get(targetKey);
+    const matching = records.filter(record => this.matches(record));
+    const panels = [...axes].map(axis => {
+      // Disjunctive facets: ignore this axis, retain every other selected axis.
+      const eligible = records.filter(record => this.matches(record, axis));
+      const { byPost, counts, labeled, total, multi } = this.axisPosts(eligible, axis);
+      const values = [...counts].map(([key, count]) => ({ key, count,
+        label: this.terms.get(key)?.label || key, percent: labeled ? count / labeled * 100 : 0 }))
+        .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+      (this.values[axis] || []).forEach(key => {
+        if (!counts.has(key)) values.push({ key, count: 0, label: this.terms.get(key)?.label || key, percent: 0 });
+      });
+      const otherKeys = new Set(values.slice(6).map(value => value.key));
+      const otherCount = [...byPost.values()].filter(values =>
+        [...values].some(key => otherKeys.has(key))).length;
+      return { axis, label: this.axes.get(axis)?.label || axis.replaceAll('_', ' '),
+        labeled, total, multi, values, otherCount,
+        baselineLabeled: baseline.get(axis).labeled, baselineTotal: baseline.get(axis).total };
+    }).sort((a, b) => a.label.localeCompare(b.label));
+    return { target, choices, records, matching, panels,
+      targetPosts: target ? new Set(records.map(record => record.postId)).size : posts.length,
+      matchingPosts: target ? new Set(matching.map(record => record.postId)).size : posts.length };
+  }
+
+  displayLabel(value) {
+    const label = String(value || '');
+    return label.charAt(0).toUpperCase() + label.slice(1);
+  }
+
+  presentation(view) {
+    const item = view.target.startsWith('item:') ? view.target.slice(5)
+      : this.terms.get(view.target.slice(7))?.reporting_item_key || view.records[0]?.item;
+    const category = this.items.get(item)?.mid_category || '';
+    const required = {
+      Outer: ['fit', 'silhouette', 'visible_material', 'garment_length'],
+      Inner: ['fit', 'silhouette', 'visible_material', 'neckline', 'collar_type'],
+      Bottom: ['fit', 'silhouette', 'garment_length'],
+      Shoes: ['visible_material', 'toe_shape', 'heel_type'],
+      Bag: ['bag_carry_style', 'visible_material'],
+    }[category] || [];
+    const priority = ['design_type', ...required, 'color_family'];
+    const rank = axis => priority.includes(axis) ? priority.indexOf(axis) : priority.length;
+    const ordered = [...view.panels].sort((a, b) => rank(a.axis) - rank(b.axis)
+      || (rank(a.axis) === priority.length ? b.labeled - a.labeled : 0)
+      || a.label.localeCompare(b.label));
+    const low = panel => panel.axis !== 'design_type' && !(this.values[panel.axis] || []).length
+      && ((panel.baselineLabeled ?? panel.labeled) < 20
+        || (panel.baselineLabeled ?? panel.labeled) < (panel.baselineTotal ?? panel.total) * .03);
+    // Reserve visible slots for selections (and the item's Design Type panel).
+    const visible = new Set(ordered.filter(panel => panel.axis === 'design_type'
+      || (this.values[panel.axis] || []).length).map(panel => panel.axis));
+    ordered.forEach(panel => {
+      if (visible.size < 8 && !low(panel)) visible.add(panel.axis);
+    });
+    return { main: ordered.filter(panel => visible.has(panel.axis)),
+      low: ordered.filter(panel => !visible.has(panel.axis)), shoes: category === 'Shoes' };
+  }
+
+  toggle(axis, key) {
+    const values = new Set(this.values[axis] || []);
+    if (values.has(key)) values.delete(key); else values.add(key);
+    if (values.size) this.values[axis] = [...values]; else delete this.values[axis];
+  }
+
+  select(target) {
+    this.target = target;
+    this.autoTarget = false;
+    this.values = {};
+    this.previousTarget = '';
+    this.lowAxesExpanded = false;
+  }
+
+  reset() {
+    this.target = '';
+    this.autoTarget = true;
+    this.values = {};
+    this.previousTarget = '';
+    this.expanded.clear();
+    this.lowAxesExpanded = false;
+  }
+}
+
+</script>
 </head>
 <body>
   <div class="top-strip">
@@ -1968,8 +2255,8 @@
             </div>
           </section>
           <div class="content-filter-summary" id="contentFilterSummary" aria-live="polite">
-            <span><strong>전체 카테고리</strong></span>
-            <span>분류 데이터를 준비 중입니다.</span>
+            <div class="content-summary-line" id="contentSummaryLine"></div>
+            <div class="attribute-controls" id="attributeControls"></div>
           </div>
           <div class="result-count" id="resultCount" aria-live="polite">0개 콘텐츠</div>
           <div class="post-grid" id="postGrid"></div>
@@ -2026,7 +2313,7 @@
   <noscript>이 대시보드는 필터와 차트 표시에 JavaScript가 필요합니다.</noscript>
 
   <!-- DASHBOARD_DATA_START -->
-<script id="dashboard-data" type="application/json">{"core":"data/core-51040a7994.json","posts":["data/posts-2026-01-d62a406534.json","data/posts-2026-02-4f571ba7b3.json","data/posts-2026-03-2d7b39068c.json","data/posts-2026-04-92b98bb898.json","data/posts-2026-05-c801f6cbc8.json","data/posts-2026-06-af38d8c2a7.json","data/posts-2026-07-8bf6aafcb5.json","data/posts-2026-08-943f03f49b.json","data/posts-2026-09-f04fd3b42b.json","data/posts-2026-10-964def6b16.json","data/posts-2026-11-8a7e3cfea8.json"]}</script>
+<script id="dashboard-data" type="application/json">{"core":"data/core-ed4e1bf9cf.json","posts":["data/posts-2026-01-ee695c21bb.json","data/posts-2026-02-1b999c72e1.json","data/posts-2026-03-507c6c3639.json","data/posts-2026-04-2d2b831308.json","data/posts-2026-05-eeeef2678c.json","data/posts-2026-06-be6626b2ab.json","data/posts-2026-07-93c87a5346.json","data/posts-2026-08-73a5ec0f2c.json","data/posts-2026-09-6e5970c2d9.json","data/posts-2026-10-6d987096a9.json","data/posts-2026-11-9dfca90767.json"]}</script>
   <script>
     (() => {
       "use strict";
@@ -2107,6 +2394,9 @@
       const dateFormat = new Intl.DateTimeFormat("ko-KR", { month: "short", day: "numeric" });
       const fullDateFormat = new Intl.DateTimeFormat("ko-KR", { year: "numeric", month: "short", day: "numeric" });
       const state = { search: "", creator: "", period: "", week: "", type: "", sortOrder: "latest", category: "", signalLevel: "design_type_signals", signalKey: "", visible: 15 };
+      const attributeBreakdown = new AttributeBreakdown({ items: itemByKey, terms: designTermByKey, axes: designOntology.axes });
+      let attributeUrlActive = true;
+      let attributesCollapsed = false;
       const modalState = { post: null, assets: [], index: 0 };
       const labelModalState = { post: null };
       const filteredPostsCache = new Map();
@@ -2151,6 +2441,8 @@
         categorySidebar: document.getElementById("categorySidebar"),
         categoryNav: document.getElementById("categoryNav"),
         contentFilterSummary: document.getElementById("contentFilterSummary"),
+        contentSummaryLine: document.getElementById("contentSummaryLine"),
+        attributeControls: document.getElementById("attributeControls"),
         insightWeek: document.getElementById("insightWeek"),
         insightWeekNote: document.getElementById("insightWeekNote"),
         insightCreator: document.getElementById("insightCreator"),
@@ -2852,6 +3144,7 @@
                 <div class="design-signal-metric"><span>Confidence</span><strong>${Math.round(row.averageConfidence * 100)}%</strong></div>
               </div>
               <div class="design-signal-previews">${previews}</div>
+              ${state.signalLevel === "design_type_signals" ? `<button class="attribute-entry" type="button" data-view-attributes="${escapeHTML(row.signalKey)}">속성 보기 →</button>` : ""}
               <button class="design-signal-select" type="button"
                 data-select-signal="${escapeHTML(row.signalKey)}"
                 aria-pressed="${active}">
@@ -2870,6 +3163,8 @@
           button.addEventListener("click", () => {
             const signalKey = button.dataset.selectSignal || "";
             state.signalKey = state.signalKey === signalKey ? "" : signalKey;
+            if (!state.signalKey) attributeBreakdown.select("");
+            else attributeBreakdown.select(state.signalLevel === "design_type_signals" ? `design:${signalKey}` : "");
             state.visible = 15;
             scheduleRender();
             window.requestAnimationFrame(() => {
@@ -2887,6 +3182,98 @@
             openMediaModal(post, assetIndex);
           });
         });
+      }
+
+      function attributeTargetLabel(target) {
+        const label = target.startsWith("design:")
+          ? designTermByKey.get(target.slice(7))?.label || target.slice(7)
+          : itemLabelByKey.get(target.slice(5)) || target.slice(5);
+        return attributeBreakdown.displayLabel(label);
+      }
+
+      function renderAttributes(view) {
+        const presentation = attributeBreakdown.presentation(view);
+        const candidateTargets = state.category.startsWith("item:")
+          ? view.choices.filter(([key]) => `item:${key}` === view.target) : [...view.choices];
+        if (view.target.startsWith("item:") && !candidateTargets.some(([key]) => `item:${key}` === view.target)) {
+          candidateTargets.unshift([view.target.slice(5), view.targetPosts]);
+        }
+        const targets = `<div class="attribute-targets">
+          ${view.target.startsWith("design:")
+            ? `<button class="attribute-chip selected" type="button" data-clear-attribute-target aria-label="대상 해제">${escapeHTML(attributeTargetLabel(view.target))} ×</button>`
+            : `${!view.target ? "<span>대상 아이템 선택</span>" : ""}${candidateTargets.map(([key, count]) => {
+              const active = view.target === `item:${key}`;
+              return `<button class="attribute-chip${active ? " selected" : ""}" type="button" ${active ? "data-clear-attribute-target" : `data-attribute-target="item:${escapeHTML(key)}"`} aria-pressed="${active}">${escapeHTML(attributeBreakdown.displayLabel(itemLabelByKey.get(key) || key))} <small>${number.format(count)}개 게시물</small>${active ? " ×" : ""}</button>`;
+            }).join("")}`}
+        </div>`;
+        const valueButton = (panel, value) => `<button class="attribute-value" type="button"
+          data-attribute-axis="${escapeHTML(panel.axis)}" data-attribute-value="${escapeHTML(value.key)}"
+          data-count="${value.count}" data-denominator="${panel.labeled}"
+          aria-pressed="${(attributeBreakdown.values[panel.axis] || []).includes(value.key)}"
+          style="--share:${Math.min(100, value.percent).toFixed(2)}%">
+          <span class="attribute-value-label" title="${escapeHTML(attributeBreakdown.displayLabel(value.label))}">${escapeHTML(attributeBreakdown.displayLabel(value.label))}</span><span class="attribute-value-count">${value.percent.toFixed(1)}% · ${number.format(value.count)}건</span></button>`;
+        const panelMarkup = panel => `
+          <section class="attribute-panel" data-attribute-panel="${escapeHTML(panel.axis)}">
+            <h3 title="${escapeHTML(attributeBreakdown.displayLabel(panel.label))}">${escapeHTML(attributeBreakdown.displayLabel(panel.label))}</h3>
+            <span class="attribute-panel-note">라벨 ${number.format(panel.labeled)} / 대상 ${number.format(panel.total)}개 게시물${panel.multi ? " · 복수값 포함" : ""}</span>
+            ${panel.values.slice(0, 6).map(value => valueButton(panel, value)).join("")}
+            ${panel.values.length > 6 ? `<details class="attribute-other" data-attribute-other="${escapeHTML(panel.axis)}"${attributeBreakdown.expanded.has(panel.axis) ? " open" : ""}>
+              <summary>기타 ${panel.labeled ? (panel.otherCount / panel.labeled * 100).toFixed(1) : "0.0"}% · ${number.format(panel.otherCount)}건 (${panel.values.length - 6}개 값 펼치기)</summary>
+              ${panel.values.slice(6).map(value => valueButton(panel, value)).join("")}</details>` : ""}
+          </section>`;
+        elements.attributeControls.hidden = attributesCollapsed;
+        elements.attributeControls.innerHTML = targets + '<div class="attribute-grid" id="attributeGrid">' + (view.panels.length
+          ? presentation.main.map(panelMarkup).join("") + (presentation.low.length ? `<details class="attribute-low-axes" data-attribute-low-axes${attributeBreakdown.lowAxesExpanded ? " open" : ""}><summary title="라벨이 적거나 첫 8개 밖의 축">추가 축 ${presentation.low.length}개 펼치기</summary><div class="attribute-low-grid">${presentation.low.map(panelMarkup).join("")}</div></details>` : "")
+          : `<div class="design-signal-empty"><strong>${view.target ? "이 범위에 라벨링된 속성이 없습니다." : "대상 아이템을 선택해 주세요."}</strong>기간·계정·아이템 선택을 확인해 주세요.</div>`) + '</div>' + attributeFilterChips(view);
+      }
+
+      function attributeFilterChips(view) {
+        if (!view?.target) return "";
+        const values = Object.entries(attributeBreakdown.values).flatMap(([axis, keys]) => keys.map(key =>
+          `<button class="attribute-chip selected" type="button" data-remove-attribute-axis="${escapeHTML(axis)}" data-remove-attribute-value="${escapeHTML(key)}">${escapeHTML(attributeBreakdown.displayLabel(designTermByKey.get(key)?.label || key))} ×</button>`));
+        return values.length ? `<div class="attribute-filter-chips">${values.join("")}<button class="attribute-chip" type="button" data-clear-attribute-values>속성 전체 해제 ×</button></div>` : "";
+      }
+
+      function syncAttributeUrl() {
+        if (!attributeUrlActive) return;
+        const snapshot = { level: state.signalLevel, signal: state.signalKey,
+          search: state.search, creator: state.creator, period: state.period, week: state.week,
+          type: state.type, category: state.category, sort: state.sortOrder,
+          target: attributeBreakdown.target, auto: attributeBreakdown.autoTarget, values: attributeBreakdown.values,
+          collapsed: attributesCollapsed };
+        const hash = `#attributes=${encodeURIComponent(JSON.stringify(snapshot))}`;
+        if (window.location.hash !== hash) window.history.replaceState(null, "", hash);
+      }
+
+      function restoreAttributeUrl() {
+        if (!window.location.hash.startsWith("#attributes=") || window.location.hash.length > 20000) return;
+        try {
+          const saved = JSON.parse(decodeURIComponent(window.location.hash.slice(12)));
+          if (!saved || typeof saved !== "object") return;
+          const levels = ["design_type_signals", "structural_detail_signals", "surface_detail_signals"];
+          state.signalLevel = levels.includes(saved.level) ? saved.level : "design_type_signals";
+          state.signalKey = typeof saved.signal === "string" ? saved.signal : "";
+          for (const key of ["search", "creator", "period", "week", "type", "category"]) {
+            if (typeof saved[key] === "string") state[key] = saved[key].slice(0, 1000);
+          }
+          state.sortOrder = saved.sort === "engagement" ? "engagement" : "latest";
+          attributeBreakdown.reset();
+          if (typeof saved.target === "string" && (saved.target.startsWith("item:") && itemByKey.has(saved.target.slice(5))
+            || saved.target.startsWith("design:") && designTermByKey.has(saved.target.slice(7)))) attributeBreakdown.target = saved.target;
+          attributeBreakdown.autoTarget = saved.auto !== false;
+          attributesCollapsed = saved.collapsed === true;
+          Object.entries(saved.values || {}).forEach(([axis, keys]) => {
+            if (!Array.isArray(keys)) return;
+            const accepted = [...new Set(keys)].filter(key => designTermByKey.get(key)?.axis === axis);
+            if (accepted.length) attributeBreakdown.values[axis] = accepted;
+          });
+          for (const [key, element] of [["search", "searchInput"], ["creator", "creatorFilter"], ["period", "periodFilter"], ["week", "weekFilter"], ["type", "typeFilter"]]) elements[element].value = state[key];
+          elements.sortFilter.value = state.sortOrder;
+          openTaxonomyBranch = state.category.startsWith("mid:") ? state.category.slice(4)
+            : itemByKey.get(state.category.slice(5))?.mid_category || "";
+          attributeUrlActive = true;
+          state.visible = 15;
+        } catch (_error) { /* Malformed shared links fall back to the current screen. */ }
       }
 
       function updateFreshness() {
@@ -3382,6 +3769,8 @@
         const renderStartedAt = window.performance.now();
         const basePosts = filteredPosts();
         const weeklyPosts = filteredPosts({ ignoreWeek: true });
+        document.documentElement.dataset.attributeMode = "true";
+        const attributeView = attributeBreakdown.view(basePosts, state.category, filterStateKey());
         const signalResult = aggregateDesignSignals(basePosts);
         let activeSignal = state.signalKey
           ? signalResult.rows.find(row => row.signalKey === state.signalKey)
@@ -3391,6 +3780,13 @@
           activeSignal = null;
         }
         activeSignalEvidenceByPost = new Map();
+        if (!activeSignal && attributeView?.target) {
+          attributeView.matching.forEach(record => {
+            const values = activeSignalEvidenceByPost.get(record.postId) || [];
+            values.push({ asset_id: record.assetId });
+            activeSignalEvidenceByPost.set(record.postId, values);
+          });
+        }
         if (activeSignal) {
           activeSignal.evidence.forEach(item => {
             const postId = String(item.post_id || "");
@@ -3399,7 +3795,7 @@
             activeSignalEvidenceByPost.set(postId, values);
           });
         }
-        const posts = activeSignal
+        const posts = activeSignal || attributeView?.target
           ? basePosts.filter(post => activeSignalEvidenceByPost.has(String(post.post_id || "")))
           : basePosts;
         const sortedPosts = sortContentPosts(posts);
@@ -3438,18 +3834,83 @@
         const evidenceText = activeSignal
           ? `${number.format(posts.length)}개 근거 콘텐츠 · 정확한 라벨 이미지가 첫 장`
           : "디자인 카드를 선택하면 근거 콘텐츠만 표시";
-        elements.contentFilterSummary.innerHTML = `<span><strong>${escapeHTML(categoryLabel)}</strong> · ${escapeHTML(periodLabel)}${signalFilter}</span><span>${escapeHTML(weekText)} · ${escapeHTML(evidenceText)}</span>`;
+        const targetSummary = attributeView.target && attributeTargetLabel(attributeView.target) !== categoryLabel
+          ? ` · ${escapeHTML(attributeTargetLabel(attributeView.target))}` : "";
+        elements.contentSummaryLine.innerHTML = `<span><strong>${escapeHTML(categoryLabel)}</strong> · ${escapeHTML(periodLabel)}${signalFilter || targetSummary}</span><span class="attribute-summary-actions">${escapeHTML(weekText)} · <strong>${number.format(posts.length)}개 일치 콘텐츠</strong><button class="attribute-collapse" type="button" data-toggle-attributes aria-expanded="${!attributesCollapsed}" aria-controls="attributeControls">속성 ${attributesCollapsed ? "펼치기 ▾" : "접기 ▴"}</button></span>`;
+        elements.contentFilterSummary.dataset.matchingPosts = String(posts.length);
+        renderAttributes(attributeView);
+        syncAttributeUrl();
         document.documentElement.dataset.lastRenderMs = (window.performance.now() - renderStartedAt).toFixed(1);
+        document.documentElement.dataset.lastRenderAt = String(window.performance.now());
       }
 
       let renderFrame = 0;
       function scheduleRender() {
         if (renderFrame) window.cancelAnimationFrame(renderFrame);
+        elements.contentFilterSummary.setAttribute("aria-busy", "true");
         renderFrame = window.requestAnimationFrame(() => {
           renderFrame = 0;
           render();
+          elements.contentFilterSummary.removeAttribute("aria-busy");
         });
       }
+
+      function scrollToAttributeControls() {
+        const controls = document.querySelector(".control-wrap");
+        const inset = controls && getComputedStyle(controls).position === "sticky"
+          ? controls.getBoundingClientRect().height : 0;
+        window.scrollTo({ top: Math.max(0, window.scrollY + elements.contentFilterSummary.getBoundingClientRect().top - inset - 12), behavior: "smooth" });
+      }
+
+      function handleAttributeClick(event) {
+        if (event.target.closest("[data-toggle-attributes]")) {
+          attributesCollapsed = !attributesCollapsed;
+          scheduleRender();
+          return true;
+        }
+        const entry = event.target.closest("[data-view-attributes]");
+        const target = event.target.closest("[data-attribute-target]");
+        const value = event.target.closest("[data-attribute-value]");
+        const remove = event.target.closest("[data-remove-attribute-value]");
+        const clearTarget = event.target.closest("[data-clear-attribute-target]");
+        const clearValues = event.target.closest("[data-clear-attribute-values]");
+        if (!entry && !target && !value && !remove && !clearTarget && !clearValues) return false;
+        if (entry) {
+          attributeBreakdown.select(`design:${entry.dataset.viewAttributes}`);
+          attributesCollapsed = false;
+        } else if (target) attributeBreakdown.select(target.dataset.attributeTarget);
+        else if (clearTarget) {
+          if (state.category.startsWith("item:")) state.category = "";
+          attributeBreakdown.select("");
+        } else if (clearValues) attributeBreakdown.values = {};
+        else if (value) {
+          // Pin an automatic target before a filter change can reorder the chips.
+          if (!state.category.startsWith("item:") && !attributeBreakdown.target) {
+            attributeBreakdown.target = attributeBreakdown.previousTarget;
+            attributeBreakdown.autoTarget = false;
+          }
+          attributeBreakdown.toggle(value.dataset.attributeAxis, value.dataset.attributeValue);
+        } else if (remove) attributeBreakdown.toggle(remove.dataset.removeAttributeAxis, remove.dataset.removeAttributeValue);
+        state.visible = 15;
+        state.signalKey = "";
+        scheduleRender();
+        if (entry) window.requestAnimationFrame(() => {
+          scrollToAttributeControls();
+        });
+        return true;
+      }
+
+      elements.designSignalGrid.addEventListener("click", handleAttributeClick);
+      elements.contentFilterSummary.addEventListener("toggle", event => {
+        if (event.target.matches("[data-attribute-low-axes]")) {
+          attributeBreakdown.lowAxesExpanded = event.target.open;
+          return;
+        }
+        const axis = event.target.dataset.attributeOther;
+        if (!axis) return;
+        if (event.target.open) attributeBreakdown.expanded.add(axis); else attributeBreakdown.expanded.delete(axis);
+      }, true);
+      window.addEventListener("hashchange", () => { restoreAttributeUrl(); scheduleRender(); });
 
       let searchRenderTimer = null;
       elements.searchInput.addEventListener("input", event => {
@@ -3484,6 +3945,7 @@
         scheduleRender();
       });
       elements.categoryNav.addEventListener("click", event => {
+        attributeBreakdown.values = {};
         const branchToggle = event.target.closest("[data-mid-category]");
         if (branchToggle) {
           const key = branchToggle.dataset.midCategory || "";
@@ -3520,12 +3982,16 @@
         scheduleRender();
       });
       elements.contentFilterSummary.addEventListener("click", event => {
+        if (handleAttributeClick(event)) return;
         if (!event.target.closest("[data-clear-signal-filter]")) return;
+        attributeBreakdown.select("");
         state.signalKey = "";
         state.visible = 15;
         scheduleRender();
       });
       elements.resetFilters.addEventListener("click", () => {
+        attributeBreakdown.reset();
+        attributesCollapsed = false;
         Object.assign(state, { search: "", creator: "", period: "", week: "", type: "", sortOrder: "latest", category: "", signalLevel: "design_type_signals", signalKey: "", visible: 15 });
         openTaxonomyBranch = "";
         elements.searchInput.value = "";
@@ -3545,6 +4011,7 @@
         if (!button) return;
         state.signalLevel = "design_type_signals";
         state.signalKey = button.dataset.pulseSignal || "";
+        attributeBreakdown.select(state.signalKey ? `design:${state.signalKey}` : "");
         if (currentWeeklyPulse?.focus?.week) {
           state.week = currentWeeklyPulse.focus.week;
           elements.weekFilter.value = state.week;
@@ -3644,6 +4111,7 @@
           else if (cat.startsWith("item:")) openTaxonomyBranch = itemByKey.get(cat.slice(5))?.mid_category || "";
         }
       })();
+      restoreAttributeUrl();
       setCategoryDrawerOpen(false);
       render();
       document.documentElement.dataset.dashboardReady = "true";
